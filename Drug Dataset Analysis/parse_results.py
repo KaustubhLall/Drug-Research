@@ -2,26 +2,13 @@
 
 import csv
 from statistics import *
-from pprint import pprint
 
 import numpy as np
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import StratifiedKFold
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.externals.six import StringIO
-from IPython.display import Image
-from sklearn.tree import export_graphviz
-import pydotplus
-from graphviz import Source
-from sklearn import tree
-from IPython.display import SVG
-
-import numpy as np
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import roc_auc_score
-from sklearn.model_selection import StratifiedKFold
 
 
 def find_k_best(fname, k=20):
@@ -64,9 +51,10 @@ def find_k_best(fname, k=20):
     res_rfw = sorted(res_rfw, reverse=True)
 
     # fina CA's for the best scores
-    ca_avg = [(find_ca('rfw', features[x[1]]) + find_ca('dt', features[x[1]])) / 2 for x in res_avg[:min(k, len(res_avg))]]
+
     ca_dtree = [find_ca('dt', features[x[1]]) for x in res_dt[:min(k, len(res_avg))]]
     ca_rfw = [find_ca('rfw', features[x[1]]) for x in res_rfw[:min(k, len(res_avg))]]
+    ca_avg = [np.mean(x) for x in zip(ca_dtree, ca_rfw)]
 
     arr = [['Average AUC', 'Average CA', 'Average AUC Features', 'DT AUC', 'DT CA', 'DT AUC Features', 'RFW AUC',
             'RFW CA', 'RFW AUC Features']]
@@ -76,9 +64,9 @@ def find_k_best(fname, k=20):
     # print(features[res_avg[0][1]])
     for i in range(min(k, len(res_avg))):
         arr.append([
-            res_avg[i][0], ', '.join([x.strip() for x in features[res_avg[i][1]]]),
+            res_avg[i][0], ca_avg[i], ', '.join([x.strip() for x in features[res_avg[i][1]]]),
             res_dt[i][0], ', '.join([x.strip() for x in features[res_dt[i][1]]]),
-            res_rfw[i][0], ', '.join([x.strip() for x in features[res_rfw[i][1]]]),
+            res_rfw[i][0], ca_dtree[i], ca_rfw[i], ', '.join([x.strip() for x in features[res_rfw[i][1]]]),
 
             ])
     print(arr)
@@ -182,16 +170,15 @@ def find_best_over(k=100, f=[2, 5, 6, 7, 8, 9], fnameprefix='results'):
 
     for val in f:
         # try:
-            find_k_best(fnameprefix + str(val), k)
+        find_k_best(fnameprefix + str(val), k)
         # except:
-            print('Tried searching for file named', fnameprefix + str(val), 'unsuccessfully. This file was skipped.')
+        print('Tried searching for file named', fnameprefix + str(val), 'unsuccessfully. This file was skipped.')
 
 
 ## Run the script over here
 # find_best_over(300, [2, 3, 4, 5, 6, 7])
 # find_best_over(300, [2, 3, 4, 5, 6])
 find_best_over(300, [2])
-
 
 
 # find_k_best('results2', 40)
