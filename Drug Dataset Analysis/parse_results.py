@@ -64,9 +64,9 @@ def find_k_best(fname, k=20):
     res_rfw = sorted(res_rfw, reverse=True)
 
     # fina CA's for the best scores
-    ca_avg = [(find_ca('rfw', features[x[1]]) + find_ca('dt', features[x[1]])) / 2 for x in res_avg]
-    ca_dtree = [find_ca('dt', features[x[1]]) for x in res_dt]
-    ca_rfw = [find_ca('rfw', features[x[1]]) for x in res_rfw]
+    ca_avg = [(find_ca('rfw', features[x[1]]) + find_ca('dt', features[x[1]])) / 2 for x in res_avg[:min(k, len(res_avg))]]
+    ca_dtree = [find_ca('dt', features[x[1]]) for x in res_dt[:min(k, len(res_avg))]]
+    ca_rfw = [find_ca('rfw', features[x[1]]) for x in res_rfw[:min(k, len(res_avg))]]
 
     arr = [['Average AUC', 'Average CA', 'Average AUC Features', 'DT AUC', 'DT CA', 'DT AUC Features', 'RFW AUC',
             'RFW CA', 'RFW AUC Features']]
