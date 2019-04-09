@@ -63,7 +63,13 @@ def find_k_best(fname, k=20):
     res_dt = sorted(res_dt, reverse=True)
     res_rfw = sorted(res_rfw, reverse=True)
 
-    arr = [['Average AUC', 'Average AUC Features', 'DT AUC', 'DT AUC Features', 'RFW AUC', 'RFW AUC Features']]
+    # fina CA's for the best scores
+    ca_avg = [(find_ca('rfw', features[x[1]]) + find_ca('dt', features[x[1]])) / 2 for x in res_avg]
+    ca_dtree = [find_ca('dt', features[x[1]]) for x in res_dt]
+    ca_rfw = [find_ca('rfw', features[x[1]]) for x in res_rfw]
+
+    arr = [['Average AUC', 'Average CA', 'Average AUC Features', 'DT AUC', 'DT CA', 'DT AUC Features', 'RFW AUC',
+            'RFW CA', 'RFW AUC Features']]
 
     # generate array with column header specified above. This array will be written to a csv file.
     # arr is a matrix of dimension (k + 1) * 10 columns.
@@ -75,7 +81,7 @@ def find_k_best(fname, k=20):
             res_rfw[i][0], ', '.join([x.strip() for x in features[res_rfw[i][1]]]),
 
             ])
-
+    print(arr)
     # write to csv file
     f = open(fname + 'parsed.csv', 'w', newline='')
     writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -175,15 +181,17 @@ def find_best_over(k=100, f=[2, 5, 6, 7, 8, 9], fnameprefix='results'):
     """
 
     for val in f:
-        try:
+        # try:
             find_k_best(fnameprefix + str(val), k)
-        except:
+        # except:
             print('Tried searching for file named', fnameprefix + str(val), 'unsuccessfully. This file was skipped.')
 
 
 ## Run the script over here
 # find_best_over(300, [2, 3, 4, 5, 6, 7])
-find_best_over(300, [2, 3, 4, 5, 6])
+# find_best_over(300, [2, 3, 4, 5, 6])
+find_best_over(300, [2])
+
 
 
 # find_k_best('results2', 40)
