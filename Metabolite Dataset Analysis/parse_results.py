@@ -1,7 +1,14 @@
 ### File - parse_results.py
 
-from statistics import *
 import csv
+from statistics import *
+
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import roc_auc_score
+from sklearn.model_selection import StratifiedKFold
+from sklearn.tree import DecisionTreeClassifier
 
 
 def find_k_best(fname, k=20):
@@ -32,7 +39,6 @@ def find_k_best(fname, k=20):
         rdt, rrfw, feature = line.split('\t')
         res_dt.append((float(rdt), i))
         res_rfw.append((float(rrfw), i))
-    
 
         # we calculate the average of each classifier on each occasion.
         res_avg.append((sum([x[i][0] for x in res]) / len(res), i))
@@ -43,25 +49,111 @@ def find_k_best(fname, k=20):
     res_avg = sorted(res_avg, reverse=True)
     res_dt = sorted(res_dt, reverse=True)
     res_rfw = sorted(res_rfw, reverse=True)
-   
 
-    arr = [['Average AUC', 'Average AUC Features', 'DT AUC', 'DT AUC Features', 'RFW AUC', 'RFW AUC Features']]
+    # fina CA's for the best scores
+
+    ca_dtree = [find_ca('dt', features[x[1]]) for x in res_dt[:min(k, len(res_avg))]]
+    ca_rfw = [find_ca('rfw', features[x[1]]) for x in res_rfw[:min(k, len(res_avg))]]
+    ca_avg = [np.mean(x) for x in zip(ca_dtree, ca_rfw)]
+
+    arr = [['Average AUC', 'Average CA', 'Average AUC Features', 'DT AUC', 'DT CA', 'DT AUC Features', 'RFW AUC',
+            'RFW CA', 'RFW AUC Features']]
 
     # generate array with column header specified above. This array will be written to a csv file.
     # arr is a matrix of dimension (k + 1) * 10 columns.
-    #print(features[res_avg[0][1]])
+    # print(features[res_avg[0][1]])
     for i in range(min(k, len(res_avg))):
         arr.append([
-            res_avg[i][0], ', '.join([x.strip() for x in features[res_avg[i][1]]]),
+            res_avg[i][0], ca_avg[i], ', '.join([x.strip() for x in features[res_avg[i][1]]]),
             res_dt[i][0], ', '.join([x.strip() for x in features[res_dt[i][1]]]),
-            res_rfw[i][0], ', '.join([x.strip() for x in features[res_rfw[i][1]]]),
-     
-        ])
+            res_rfw[i][0], ca_dtree[i], ca_rfw[i], ', '.join([x.strip() for x in features[res_rfw[i][1]]]),
 
+            ])
+    print(arr)
     # write to csv file
     f = open(fname + 'parsed.csv', 'w', newline='')
     writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     writer.writerows(arr)
+
+
+def find_ca(clf, features):
+    """
+    Find classification accuracy for a given kind of classifier.
+    :param clf: either rfw or dt
+    :param features: features to try
+    :return: classification accuracy,  single number
+    """
+    ''' HYPERPARAMS FOR DECISION TREE
+
+     These parameters implement a rudimentary pruning algorithm, would ideally like to use AB pruning'''
+    enable_pruning = True
+    # maximum depth of dtree
+    max_depth = 5
+    # how many samples your need atleast, at a LEAF node
+    min_samples = 3
+
+    d_trees = []
+
+    all_data, all_labels, test_data, test_labels, train_data, train_labels = load_data()
+
+    aucs = []
+    # make fold
+    skf = StratifiedKFold(n_splits=10, shuffle=True)
+    for trx, tex in skf.split(all_data, all_labels):
+        # strip data to required features
+        subset_data = all_data.filter(features, axis=1)
+
+        if clf == 'rfw':
+            # find auc
+            rfwtree = RandomForestClassifier(n_estimators=100)
+            rfwtree.fit(subset_data.iloc[trx, :], all_labels.iloc[trx])
+            pred = rfwtree.predict(subset_data.iloc[tex, :])
+            labels = all_labels.iloc[tex]
+
+            acc = roc_auc_score(labels, pred)
+            # record auc to average later
+            aucs.append(acc)
+        else:
+            # find auc
+            dtree = DecisionTreeClassifier(presort=True, max_depth=max_depth, min_samples_leaf=min_samples)
+            dtree.fit(subset_data.iloc[trx, :], all_labels.iloc[trx])
+            pred = dtree.predict(subset_data.iloc[tex, :])
+            labels = all_labels.iloc[tex]
+
+            acc = roc_auc_score(labels, pred)
+            # record auc to average later
+            aucs.append(acc)
+
+    return np.mean(aucs)
+
+
+def load_data():
+    """
+    Loads in data from given parameters.
+    :return: all_data, all_labels, test_data, test_labels, train_data, train_labels
+    """
+    path_train_data = 'train.csv'
+    path_test_data = 'test.csv'
+    path_all_data = 'Dataset Correlated Removed.csv'
+
+    # load dataset
+    all_data = pd.DataFrame(pd.read_csv(path_all_data))
+    all_labels = all_data['SLC'].astype('category').cat.codes
+    # drop labels
+    all_data.drop('SLC', axis=1, inplace=True)
+
+    train_data = pd.DataFrame(pd.read_csv(path_train_data))
+    train_labels = train_data['SLC'].astype('category').cat.codes
+    # drop labels
+
+    train_data.drop('SLC', axis=1, inplace=True)
+
+    test_data = pd.DataFrame(pd.read_csv(path_test_data))
+    test_labels = test_data['SLC'].astype('category').cat.codes
+    # drop labels
+    test_data.drop('SLC', axis=1, inplace=True)
+
+    return all_data, all_labels, test_data, test_labels, train_data, train_labels
 
 
 def find_best_over(k=100, f=[2, 5, 6, 7, 8, 9], fnameprefix='results'):
@@ -84,8 +176,11 @@ def find_best_over(k=100, f=[2, 5, 6, 7, 8, 9], fnameprefix='results'):
 
 
 ## Run the script over here
-#find_best_over(300, [2, 3, 4, 5, 6, 7])
-find_best_over(300, [2,3,4,5,6])
+# find_best_over(300, [2, 3, 4, 5, 6, 7])
+# find_best_over(300, [2, 3, 4, 5, 6])
+find_best_over(300, [2])
+
+
 # find_k_best('results2', 40)
 ## These functions will be defined at some  point in the future, do not contain anything right now.
 def find_stats(arr):
@@ -95,4 +190,6 @@ def find_stats(arr):
 
 def commonfeatures_k_best(fname):
     pass
+
+
 

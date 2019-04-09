@@ -169,10 +169,10 @@ def find_best_over(k=100, f=[2, 5, 6, 7, 8, 9], fnameprefix='results'):
     """
 
     for val in f:
-        # try:
-        find_k_best(fnameprefix + str(val), k)
-        # except:
-        print('Tried searching for file named', fnameprefix + str(val), 'unsuccessfully. This file was skipped.')
+        try:
+            find_k_best(fnameprefix + str(val), k)
+        except:
+            print('Tried searching for file named', fnameprefix + str(val), 'unsuccessfully. This file was skipped.')
 
 
 ## Run the script over here
