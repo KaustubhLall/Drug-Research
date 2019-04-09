@@ -151,6 +151,7 @@ def runall(testname, trainname, results, k=5):
         subtrainx = subsetDataContainer(trainx, pattern)
         subtestx = subsetDataContainer(testx, pattern)
 
+        header = trainx.header
         subtrainx = subtrainx.dataMatrix
         subtestx = subtestx.dataMatrix
 
@@ -189,9 +190,9 @@ def runall(testname, trainname, results, k=5):
         predtime = str(datetime.timedelta(seconds=predtime)).split('.')[0]
 
         # print to stdout with current states per iteration
-        print("Classified %d/%d %03.02f%% \t current bests: %02.02f, %02.02f, ETA: %s" % (
-            prog, totalseq, prog / totalseq * 1e2, bestDT[0], bestRFW[0], predtime),
-              end='\r')
+        print("| FEATURES: %100s | PROGRESS: %d/%d %03.02f%% \t | RESULTS: %02.02f/%02.02f(BEST), %02.02f/%02.02f(CURRENT)\t | ETA: %s" % ( ', '.join([header[x] for x in pattern]),
+        prog, totalseq, prog / totalseq * 1e2, bestDT[0], bestRFW[0], resDT[0], resRFW[0], predtime ),
+              end='\r\r')
     print(end='\r')
 
     # close file and finish
