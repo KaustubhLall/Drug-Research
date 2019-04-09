@@ -200,7 +200,7 @@ def runall(testname, trainname, results, k=5):
     print("Finished!")
 
 
-def enumerate_over_features(ftest, ftrain, f=[2, 3, 4, 5, 6, 7, 8]):
+def enumerate_over_features(ftest, ftrain, f=[2, 3, 4, 5, 6,]):
     """
     This function takes in a file each for training and test data, and a list of features to target for classifiers
     (decision tree, random forest walk, naive bayes, logistic regression, k nearest neighbor) and runs them using k many
