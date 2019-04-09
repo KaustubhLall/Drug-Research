@@ -141,7 +141,7 @@
     \def\gt{>}
     \def\lt{<}
     % Document parameters
-    \title{data visualization and preprocessing}
+    \title{Data Correlation Analysis - Metabolites}
     
     
     
@@ -159,73 +159,73 @@
     \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
 \def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
 
-\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
-\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
-\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
-\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
-\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
-\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
 \expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
-\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
-\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
-\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
 \expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
-\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
 \expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
-\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
-\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
-\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
 \expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
 \expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
 \expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
 \expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
 \expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
 
 \def\PYZbs{\char`\\}
 \def\PYZus{\char`\_}
@@ -281,146 +281,135 @@
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{o}{*}
-        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
-        \PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k}{import} \PY{n}{pearsonr}
-        \PY{k+kn}{import} \PY{n+nn}{itertools}
-        
-        \PY{k+kn}{from} \PY{n+nn}{datacontainer} \PY{k}{import} \PY{o}{*}
-        \PY{k+kn}{import} \PY{n+nn}{sys}
-        \PY{n}{np}\PY{o}{.}\PY{n}{set\PYZus{}printoptions}\PY{p}{(}\PY{n}{threshold}\PY{o}{=}\PY{n}{sys}\PY{o}{.}\PY{n}{maxsize}\PY{p}{)}
-        \PY{c+c1}{\PYZsh{}\PYZpc{}Read the file in\PYZpc{}}
+{\color{incolor}In [{\color{incolor}14}]:} \PY{k+kn}{from} \PY{n+nn}{pandas} \PY{k}{import} \PY{o}{*}
+         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+         \PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k}{import} \PY{n}{pearsonr}
+         \PY{k+kn}{import} \PY{n+nn}{itertools}
+         
+         \PY{k+kn}{from} \PY{n+nn}{datacontainer} \PY{k}{import} \PY{o}{*}
+         \PY{k+kn}{import} \PY{n+nn}{sys}
+         \PY{n}{np}\PY{o}{.}\PY{n}{set\PYZus{}printoptions}\PY{p}{(}\PY{n}{threshold}\PY{o}{=}\PY{n}{sys}\PY{o}{.}\PY{n}{maxsize}\PY{p}{)}
+         \PY{c+c1}{\PYZsh{}\PYZpc{}Read the file in\PYZpc{}}
 \end{Verbatim}
 
 
+    \hypertarget{load-data}{%
+\subsection{Load Data}\label{load-data}}
+
+Load data and header from a dataframe.
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{datamatrix} \PY{o}{=} \PY{n}{DataContainer}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{FINAL 102518 All Unique Metab KO.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{dataMatrix}
-        \PY{n}{header} \PY{o}{=} \PY{n}{DataContainer}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{FINAL 102518 All Unique Metab KO.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{header}
-        \PY{c+c1}{\PYZsh{} make  a dataframe}
-        \PY{n}{df}\PY{o}{=}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{datamatrix}\PY{p}{)}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{datamatrix} \PY{o}{=} \PY{n}{DataContainer}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{FINAL 102518 All Unique Metab KO.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{dataMatrix}
+         \PY{n}{header} \PY{o}{=} \PY{n}{DataContainer}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{FINAL 102518 All Unique Metab KO.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{header}
+         \PY{c+c1}{\PYZsh{} make  a dataframe}
+         \PY{n}{df}\PY{o}{=}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{datamatrix}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
 
 
+    \hypertarget{correlation-analysis-of-features}{%
+\subsection{Correlation Analysis of
+Features}\label{correlation-analysis-of-features}}
+
+Find the pairwise correlations for the feature
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{correlations} \PY{o}{=} \PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}
-        \PY{n}{columns} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}
-        
-        \PY{k}{for} \PY{n}{col\PYZus{}a}\PY{p}{,} \PY{n}{col\PYZus{}b} \PY{o+ow}{in} \PY{n}{itertools}\PY{o}{.}\PY{n}{combinations}\PY{p}{(}\PY{n}{columns}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{:}
-            \PY{n}{correlations}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{col\PYZus{}a}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}\PYZus{}}\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{col\PYZus{}b}\PY{p}{)} \PY{o}{+}  \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{(}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{header}\PY{p}{[}\PY{n}{col\PYZus{}a}\PY{p}{]} \PY{o}{+}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{header}\PY{p}{[}\PY{n}{col\PYZus{}b}\PY{p}{]}\PY{p}{]} \PY{o}{=} \PY{n}{pearsonr}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{col\PYZus{}a}\PY{p}{]}\PY{p}{,} \PY{n}{df}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{col\PYZus{}b}\PY{p}{]}\PY{p}{)}
-        
-        \PY{n}{result} \PY{o}{=} \PY{n}{DataFrame}\PY{o}{.}\PY{n}{from\PYZus{}dict}\PY{p}{(}\PY{n}{correlations}\PY{p}{,} \PY{n}{orient}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{index}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-        \PY{n}{result}\PY{o}{.}\PY{n}{columns} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PCC}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{p\PYZhy{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
-        
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{result}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PCC}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{correlations} \PY{o}{=} \PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}
+         \PY{n}{columns} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{col\PYZus{}a}\PY{p}{,} \PY{n}{col\PYZus{}b} \PY{o+ow}{in} \PY{n}{itertools}\PY{o}{.}\PY{n}{combinations}\PY{p}{(}\PY{n}{columns}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{:}
+             \PY{n}{correlations}\PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{col\PYZus{}a}\PY{p}{)} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}\PYZus{}}\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{col\PYZus{}b}\PY{p}{)} \PY{o}{+}  \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{/(}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{header}\PY{p}{[}\PY{n}{col\PYZus{}a}\PY{p}{]} \PY{o}{+}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s2}{)}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{header}\PY{p}{[}\PY{n}{col\PYZus{}b}\PY{p}{]}\PY{p}{]} \PY{o}{=} \PY{n}{pearsonr}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{col\PYZus{}a}\PY{p}{]}\PY{p}{,} \PY{n}{df}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{col\PYZus{}b}\PY{p}{]}\PY{p}{)}
+         
+         \PY{n}{result} \PY{o}{=} \PY{n}{DataFrame}\PY{o}{.}\PY{n}{from\PYZus{}dict}\PY{p}{(}\PY{n}{correlations}\PY{p}{,} \PY{n}{orient}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{index}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{result}\PY{o}{.}\PY{n}{columns} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PCC}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{p\PYZhy{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{result}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PCC}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
                                               PCC        p-value
-7\_\_24\textbackslash{}(nof\_Atoms-nof\_Fragments)          1.000000   0.000000e+00
-5\_\_24\textbackslash{}(molArea-nof\_Fragments)            0.993586  1.246462e-130
-5\_\_7\textbackslash{}(molArea-nof\_Atoms)                 0.993586  1.246462e-130
-1\_\_7\textbackslash{}(molVolume-nof\_Atoms)               0.993554  1.745201e-130
-1\_\_24\textbackslash{}(molVolume-nof\_Fragments)          0.993554  1.745201e-130
-1\_\_5\textbackslash{}(molVolume-molArea)                 0.991247  1.752824e-121
-1\_\_16\textbackslash{}(molVolume-a\_heavy)                0.982288  8.547405e-101
-19\_\_23\textbackslash{}(C\_R0-nof\_RotB)                   0.977995   1.899211e-94
-7\_\_16\textbackslash{}(nof\_Atoms-a\_heavy)                0.970694   4.309652e-86
-16\_\_24\textbackslash{}(a\_heavy-nof\_Fragments)           0.970694   4.309652e-86
-5\_\_16\textbackslash{}(molArea-a\_heavy)                  0.968668   3.794397e-84
-7\_\_20\textbackslash{}(nof\_Atoms-C\_sp3)                  0.964032   3.858290e-80
-20\_\_24\textbackslash{}(C\_sp3-nof\_Fragments)             0.964032   3.858290e-80
-1\_\_20\textbackslash{}(molVolume-C\_sp3)                  0.938138   1.661728e-64
-5\_\_20\textbackslash{}(molArea-C\_sp3)                    0.936010   1.542450e-63
-13\_\_16\textbackslash{}(Complexity-a\_heavy)              0.927815   4.219761e-60
-4\_\_9\textbackslash{}(molPSA-nof\_HBA)                    0.912658   1.066100e-54
-8\_\_17\textbackslash{}(nof\_Chirals-C\_R2)                 0.897164   4.146746e-50
-16\_\_20\textbackslash{}(a\_heavy-C\_sp3)                   0.896385   6.741688e-50
-8\_\_18\textbackslash{}(nof\_Chirals-C\_R1)                 0.895264   1.348274e-49
-4\_\_10\textbackslash{}(molPSA-nof\_HBD)                   0.880536   6.194669e-46
-14\_\_21\textbackslash{}(nof\_posCharge-posCharge/Volume)  0.879366   1.153360e-45
-5\_\_23\textbackslash{}(molArea-nof\_RotB)                 0.877709   2.751681e-45
-12\_\_18\textbackslash{}(nof\_Rings-C\_R1)                  0.875889   7.050196e-45
-1\_\_13\textbackslash{}(molVolume-Complexity)             0.873319   2.595860e-44
-17\_\_18\textbackslash{}(C\_R2-C\_R1)                       0.861745   6.589076e-42
-5\_\_19\textbackslash{}(molArea-C\_R0)                     0.861390   7.747047e-42
-13\_\_24\textbackslash{}(Complexity-nof\_Fragments)        0.841790   3.105540e-38
-7\_\_13\textbackslash{}(nof\_Atoms-Complexity)             0.841790   3.105540e-38
-23\_\_24\textbackslash{}(nof\_RotB-nof\_Fragments)          0.833656   7.015151e-37
+7\_\_24/(nof\_Atoms-nof\_Fragments)          1.000000   0.000000e+00
+5\_\_7/(molArea-nof\_Atoms)                 0.993586  1.246462e-130
+5\_\_24/(molArea-nof\_Fragments)            0.993586  1.246462e-130
+1\_\_24/(molVolume-nof\_Fragments)          0.993554  1.745201e-130
+1\_\_7/(molVolume-nof\_Atoms)               0.993554  1.745201e-130
+1\_\_5/(molVolume-molArea)                 0.991247  1.752824e-121
+1\_\_16/(molVolume-a\_heavy)                0.982288  8.547405e-101
+19\_\_23/(C\_R0-nof\_RotB)                   0.977995   1.899211e-94
+16\_\_24/(a\_heavy-nof\_Fragments)           0.970694   4.309652e-86
+7\_\_16/(nof\_Atoms-a\_heavy)                0.970694   4.309652e-86
+5\_\_16/(molArea-a\_heavy)                  0.968668   3.794397e-84
+7\_\_20/(nof\_Atoms-C\_sp3)                  0.964032   3.858290e-80
+20\_\_24/(C\_sp3-nof\_Fragments)             0.964032   3.858290e-80
+1\_\_20/(molVolume-C\_sp3)                  0.938138   1.661728e-64
+5\_\_20/(molArea-C\_sp3)                    0.936010   1.542450e-63
+13\_\_16/(Complexity-a\_heavy)              0.927815   4.219761e-60
+4\_\_9/(molPSA-nof\_HBA)                    0.912658   1.066100e-54
+8\_\_17/(nof\_Chirals-C\_R2)                 0.897164   4.146746e-50
+16\_\_20/(a\_heavy-C\_sp3)                   0.896385   6.741688e-50
+8\_\_18/(nof\_Chirals-C\_R1)                 0.895264   1.348274e-49
+4\_\_10/(molPSA-nof\_HBD)                   0.880536   6.194669e-46
+14\_\_21/(nof\_posCharge-posCharge/Volume)  0.879366   1.153360e-45
+5\_\_23/(molArea-nof\_RotB)                 0.877709   2.751681e-45
+12\_\_18/(nof\_Rings-C\_R1)                  0.875889   7.050196e-45
+1\_\_13/(molVolume-Complexity)             0.873319   2.595860e-44
+17\_\_18/(C\_R2-C\_R1)                       0.861745   6.589076e-42
+5\_\_19/(molArea-C\_R0)                     0.861390   7.747047e-42
+13\_\_24/(Complexity-nof\_Fragments)        0.841790   3.105540e-38
+7\_\_13/(nof\_Atoms-Complexity)             0.841790   3.105540e-38
+7\_\_23/(nof\_Atoms-nof\_RotB)               0.833656   7.015151e-37
 {\ldots}                                           {\ldots}            {\ldots}
-3\_\_25\textbackslash{}(molLogS-nof\_PO4)                 -0.363837   1.151676e-05
-29\_\_30\textbackslash{}(nof\_COOH-nof\_OH)                -0.385022   3.117992e-06
-25\_\_29\textbackslash{}(nof\_PO4-nof\_COOH)               -0.400874   1.103062e-06
-2\_\_28\textbackslash{}(molLogP-nof\_NH2)                 -0.415616   3.994934e-07
-6\_\_22\textbackslash{}(PSA/Area-negCharge/Volume)       -0.474947   3.963828e-09
-3\_\_22\textbackslash{}(molLogS-negCharge/Volume)        -0.478314   2.968801e-09
-6\_\_16\textbackslash{}(PSA/Area-a\_heavy)                -0.484385   1.748817e-09
-2\_\_4\textbackslash{}(molLogP-molPSA)                   -0.493888   7.479218e-10
-11\_\_29\textbackslash{}(molCharge\_total-nof\_COOH)       -0.511063   1.505918e-10
-6\_\_23\textbackslash{}(PSA/Area-nof\_RotB)               -0.513035   1.245655e-10
-1\_\_6\textbackslash{}(molVolume-PSA/Area)               -0.590003   2.642280e-14
-5\_\_6\textbackslash{}(molArea-PSA/Area)                 -0.594817   1.442213e-14
-6\_\_24\textbackslash{}(PSA/Area-nof\_Fragments)          -0.603083   4.980097e-15
-6\_\_7\textbackslash{}(PSA/Area-nof\_Atoms)               -0.603083   4.980097e-15
-6\_\_19\textbackslash{}(PSA/Area-C\_R0)                   -0.606096   3.354002e-15
-22\_\_29\textbackslash{}(negCharge/Volume-nof\_COOH)      -0.608493   2.441886e-15
-6\_\_20\textbackslash{}(PSA/Area-C\_sp3)                  -0.615381   9.660424e-16
-2\_\_10\textbackslash{}(molLogP-nof\_HBD)                 -0.624085   2.896279e-16
-3\_\_13\textbackslash{}(molLogS-Complexity)              -0.644385   1.499023e-17
-3\_\_23\textbackslash{}(molLogS-nof\_RotB)                -0.748674   4.763944e-26
-3\_\_19\textbackslash{}(molLogS-C\_R0)                    -0.759147   3.903084e-27
-3\_\_20\textbackslash{}(molLogS-C\_sp3)                   -0.804960   1.244925e-32
-3\_\_16\textbackslash{}(molLogS-a\_heavy)                 -0.809964   2.550502e-33
-15\_\_29\textbackslash{}(nof\_negCharge-nof\_COOH)         -0.826082   1.103474e-35
-2\_\_6\textbackslash{}(molLogP-PSA/Area)                 -0.848085   2.458377e-39
-2\_\_3\textbackslash{}(molLogP-molLogS)                  -0.851310   6.410993e-40
-1\_\_3\textbackslash{}(molVolume-molLogS)                -0.856305   7.494419e-41
-3\_\_24\textbackslash{}(molLogS-nof\_Fragments)           -0.857537   4.359919e-41
-3\_\_7\textbackslash{}(molLogS-nof\_Atoms)                -0.857537   4.359919e-41
-3\_\_5\textbackslash{}(molLogS-molArea)                  -0.861554   7.189466e-42
+3\_\_25/(molLogS-nof\_PO4)                 -0.363837   1.151676e-05
+29\_\_30/(nof\_COOH-nof\_OH)                -0.385022   3.117992e-06
+25\_\_29/(nof\_PO4-nof\_COOH)               -0.400874   1.103062e-06
+2\_\_28/(molLogP-nof\_NH2)                 -0.415616   3.994934e-07
+6\_\_22/(PSA/Area-negCharge/Volume)       -0.474947   3.963828e-09
+3\_\_22/(molLogS-negCharge/Volume)        -0.478314   2.968801e-09
+6\_\_16/(PSA/Area-a\_heavy)                -0.484385   1.748817e-09
+2\_\_4/(molLogP-molPSA)                   -0.493888   7.479218e-10
+11\_\_29/(molCharge\_total-nof\_COOH)       -0.511063   1.505918e-10
+6\_\_23/(PSA/Area-nof\_RotB)               -0.513035   1.245655e-10
+1\_\_6/(molVolume-PSA/Area)               -0.590003   2.642280e-14
+5\_\_6/(molArea-PSA/Area)                 -0.594817   1.442213e-14
+6\_\_24/(PSA/Area-nof\_Fragments)          -0.603083   4.980097e-15
+6\_\_7/(PSA/Area-nof\_Atoms)               -0.603083   4.980097e-15
+6\_\_19/(PSA/Area-C\_R0)                   -0.606096   3.354002e-15
+22\_\_29/(negCharge/Volume-nof\_COOH)      -0.608493   2.441886e-15
+6\_\_20/(PSA/Area-C\_sp3)                  -0.615381   9.660424e-16
+2\_\_10/(molLogP-nof\_HBD)                 -0.624085   2.896279e-16
+3\_\_13/(molLogS-Complexity)              -0.644385   1.499023e-17
+3\_\_23/(molLogS-nof\_RotB)                -0.748674   4.763944e-26
+3\_\_19/(molLogS-C\_R0)                    -0.759147   3.903084e-27
+3\_\_20/(molLogS-C\_sp3)                   -0.804960   1.244925e-32
+3\_\_16/(molLogS-a\_heavy)                 -0.809964   2.550502e-33
+15\_\_29/(nof\_negCharge-nof\_COOH)         -0.826082   1.103474e-35
+2\_\_6/(molLogP-PSA/Area)                 -0.848085   2.458377e-39
+2\_\_3/(molLogP-molLogS)                  -0.851310   6.410993e-40
+1\_\_3/(molVolume-molLogS)                -0.856305   7.494419e-41
+3\_\_24/(molLogS-nof\_Fragments)           -0.857537   4.359919e-41
+3\_\_7/(molLogS-nof\_Atoms)                -0.857537   4.359919e-41
+3\_\_5/(molLogS-molArea)                  -0.861554   7.189466e-42
 
 [496 rows x 2 columns]
 
     \end{Verbatim}
-Large Positive Correlations (>0.87):
-7__24\(nof_Atoms-nof_Fragments)          1.000000   0.000000e+00
-5__24\(molArea-nof_Fragments)            0.993586  1.246462e-130
-5__7\(molArea-nof_Atoms)                 0.993586  1.246462e-130
-1__24\(molVolume-nof_Fragments)          0.993554  1.745201e-130
-1__7\(molVolume-nof_Atoms)               0.993554  1.745201e-130
-1__5\(molVolume-molArea)                 0.991247  1.752824e-121
-1__16\(molVolume-a_heavy)                0.982288  8.547405e-101
-19__23\(C_R0-nof_RotB)                   0.977995   1.899211e-94
-7__16\(nof_Atoms-a_heavy)                0.970694   4.309652e-86
-16__24\(a_heavy-nof_Fragments)           0.970694   4.309652e-86
-5__16\(molArea-a_heavy)                  0.968668   3.794397e-84
-20__24\(C_sp3-nof_Fragments)             0.964032   3.858290e-80
-7__20\(nof_Atoms-C_sp3)                  0.964032   3.858290e-80
-1__20\(molVolume-C_sp3)                  0.938138   1.661728e-64
-5__20\(molArea-C_sp3)                    0.936010   1.542450e-63
-13__16\(Complexity-a_heavy)              0.927815   4.219761e-60
-4__9\(molPSA-nof_HBA)                    0.912658   1.066100e-54
-8__17\(nof_Chirals-C_R2)                 0.897164   4.146746e-50
-16__20\(a_heavy-C_sp3)                   0.896385   6.741688e-50
-8__18\(nof_Chirals-C_R1)                 0.895264   1.348274e-49
-4__10\(molPSA-nof_HBD)                   0.880536   6.194669e-46
 
-Keep: 24, 19, 4, 8 + rest
+    \texttt{Large\ Positive\ Correlations\ (\textgreater{}0.87):\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PCC\ \ \ \ \ \ \ \ p-value\ 7\_\_24/(nof\_Atoms-nof\_Fragments)\ \ \ \ \ \ \ \ \ \ 1.000000\ \ \ 0.000000e+00\ 5\_\_7/(molArea-nof\_Atoms)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.993586\ \ 1.246462e-130\ 5\_\_24/(molArea-nof\_Fragments)\ \ \ \ \ \ \ \ \ \ \ \ 0.993586\ \ 1.246462e-130\ 1\_\_24/(molVolume-nof\_Fragments)\ \ \ \ \ \ \ \ \ \ 0.993554\ \ 1.745201e-130\ 1\_\_7/(molVolume-nof\_Atoms)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.993554\ \ 1.745201e-130\ 1\_\_5/(molVolume-molArea)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.991247\ \ 1.752824e-121\ 1\_\_16/(molVolume-a\_heavy)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.982288\ \ 8.547405e-101\ 19\_\_23/(C\_R0-nof\_RotB)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.977995\ \ \ 1.899211e-94\ 16\_\_24/(a\_heavy-nof\_Fragments)\ \ \ \ \ \ \ \ \ \ \ 0.970694\ \ \ 4.309652e-86\ 7\_\_16/(nof\_Atoms-a\_heavy)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.970694\ \ \ 4.309652e-86\ 5\_\_16/(molArea-a\_heavy)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.968668\ \ \ 3.794397e-84\ 7\_\_20/(nof\_Atoms-C\_sp3)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.964032\ \ \ 3.858290e-80\ 20\_\_24/(C\_sp3-nof\_Fragments)\ \ \ \ \ \ \ \ \ \ \ \ \ 0.964032\ \ \ 3.858290e-80\ 1\_\_20/(molVolume-C\_sp3)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.938138\ \ \ 1.661728e-64\ 5\_\_20/(molArea-C\_sp3)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.936010\ \ \ 1.542450e-63\ 13\_\_16/(Complexity-a\_heavy)\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.927815\ \ \ 4.219761e-60\ 4\_\_9/(molPSA-nof\_HBA)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.912658\ \ \ 1.066100e-54\ 8\_\_17/(nof\_Chirals-C\_R2)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.897164\ \ \ 4.146746e-50\ 16\_\_20/(a\_heavy-C\_sp3)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.896385\ \ \ 6.741688e-50\ 8\_\_18/(nof\_Chirals-C\_R1)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.895264\ \ \ 1.348274e-49\ 4\_\_10/(molPSA-nof\_HBD)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.880536\ \ \ 6.194669e-46\ Keep:\ 24,\ 19,\ 4,\ 8\ +\ rest\ Discard:\ 7,\ 5,\ 1,\ 16,\ 20,\ 23,\ 9,\ 17,\ 10\ (molVolume,\ molArea,\ nof\_Atoms,\ nof\_HBA,\ nof\_HBD,\ a\_heavy,\ C\_R2,\ C\_sp3,\ nof\_RotB)}
 
-
-Discard: 7, 5, 1, 16, 20, 23, 9, 17, 10 (molVolume, molArea, nof_Atoms, nof_HBA, nof_HBD, a_heavy, C_R2, C_sp3, nof_RotB)
+    \hypertarget{delete-redundant-columns}{%
+\subsection{Delete Redundant Columns}\label{delete-redundant-columns}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{todel}\PY{o}{=} \PY{p}{[}\PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{16}\PY{p}{,} \PY{l+m+mi}{20}\PY{p}{,} \PY{l+m+mi}{23}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{17}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{]}
-        \PY{n}{df}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{columns}\PY{p}{[}\PY{n}{todel}\PY{p}{]}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{todel} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{16}\PY{p}{,} \PY{l+m+mi}{20}\PY{p}{,} \PY{l+m+mi}{23}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{17}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{]}
+         \PY{n}{df}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{columns}\PY{p}{[}\PY{n}{todel}\PY{p}{]}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}5}]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{features removed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{p}{[}\PY{p}{(}\PY{n}{header}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{,} \PY{n}{x}\PY{p}{)} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{sorted}\PY{p}{(}\PY{n}{todel}\PY{p}{)}\PY{p}{]}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{kept}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{p}{[}\PY{n}{header}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{sorted}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{24}\PY{p}{,} \PY{l+m+mi}{19}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}18}]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{features removed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{p}{[}\PY{p}{(}\PY{n}{header}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{,} \PY{n}{x}\PY{p}{)} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{sorted}\PY{p}{(}\PY{n}{todel}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{kept}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{p}{[}\PY{n}{header}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{sorted}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{24}\PY{p}{,} \PY{l+m+mi}{19}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{)}\PY{p}{]}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -431,6 +420,11 @@ features removed
 kept ['molPSA', 'nof\_Chirals', 'C\_R0', 'nof\_Fragments']
 
     \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} 
+\end{Verbatim}
+
 
 
     % Add a bibliography block to the postdoc
