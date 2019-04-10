@@ -65,8 +65,8 @@ def find_k_best(fname, k=20):
     for i in range(min(k, len(res_avg))):
         arr.append([
             res_avg[i][0], ca_avg[i], ', '.join([x.strip() for x in features[res_avg[i][1]]]),
-            res_dt[i][0],ca_dtree[i],', '.join([x.strip() for x in features[res_dt[i][1]]]),
-            res_rfw[i][0],  ca_rfw[i], ', '.join([x.strip() for x in features[res_rfw[i][1]]]),
+            res_dt[i][0], ca_dtree[i], ', '.join([x.strip() for x in features[res_dt[i][1]]]),
+            res_rfw[i][0], ca_rfw[i], ', '.join([x.strip() for x in features[res_rfw[i][1]]]),
 
             ])
     print(arr)
@@ -107,7 +107,7 @@ def find_ca(clf, features):
             # find auc
             rfwtree = RandomForestClassifier(n_estimators=100)
             rfwtree.fit(subset_data.iloc[trx, :], all_labels.iloc[trx])
-            pred = rfwtree.predict(subset_data.iloc[tex, :])
+            pred = rfwtree.predict(subset_data.Giloc[tex, :])
             labels = all_labels.iloc[tex]
 
             acc = roc_auc_score(labels, pred)
@@ -176,9 +176,10 @@ def find_best_over(k=100, f=[2, 5, 6, 7, 8, 9], fnameprefix='results'):
 
 
 ## Run the script over here
-# find_best_over(300, [2, 3, 4, 5, 6, 7])
-find_best_over(300, [2, 3, 4, 5, 6])
+find_best_over(300, [2, 3, 4, 5, 6, 7])
 
+
+# find_best_over(300, [2, 3, 4, 5, 6])
 
 
 # find_k_best('results2', 40)
@@ -190,6 +191,5 @@ def find_stats(arr):
 
 def commonfeatures_k_best(fname):
     pass
-
 
 
