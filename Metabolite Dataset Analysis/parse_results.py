@@ -156,7 +156,7 @@ def load_data():
     return all_data, all_labels, test_data, test_labels, train_data, train_labels
 
 
-def find_best_over(k=100, f=[2, 5, 6, 7, 8, 9], fnameprefix='results'):
+def find_best_over(k=100, f=[2, 5, 6, 7], fnameprefix='results'):
     """
     Searches for results files for each value listed in f, in the present directory and attempts to parse each file.
     It does so by calling the @find_k_best method with parameter k, for every value in f. fnameprefix is the prefix
@@ -169,15 +169,18 @@ def find_best_over(k=100, f=[2, 5, 6, 7, 8, 9], fnameprefix='results'):
     """
 
     for val in f:
-        try:
-            find_k_best(fnameprefix + str(val), k)
-        except:
-            print('Tried searching for file named', fnameprefix + str(val), 'unsuccessfully. This file was skipped.')
+        # try:
+        find_k_best(fnameprefix + str(val), k)
+        # except:
+        #   print('Tried searching for file named', fnameprefix + str(val), 'unsuccessfully. This file was skipped.')
 
+
+#
 
 ## Run the script over here
 # find_best_over(300, [2, 3, 4, 5, 6, 7])
-find_best_over(300, [2, 3, 4, 5, 6, 7, 8])
+# find_best_over(2000, [2, 3, 4, 5, 6, 7, 8])
+find_best_over(300, [2, 3, 4, 5, 6])
 
 
 # find_k_best('results2', 40)
@@ -189,5 +192,3 @@ def find_stats(arr):
 
 def commonfeatures_k_best(fname):
     pass
-
-
