@@ -1,0 +1,1 @@
+excel table which has features sent over text for comparisons. Smattering of 7 that do well (0.68) make it somewhat similar.
