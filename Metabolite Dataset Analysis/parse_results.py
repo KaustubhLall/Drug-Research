@@ -69,7 +69,8 @@ def find_k_best(fname, k=20):
             res_rfw[i][0], ca_rfw[i], ', '.join([x.strip() for x in features[res_rfw[i][1]]]),
 
             ])
-    print(arr)
+    
+    print('finished writing to', fname)
     # write to csv file
     f = open(fname + 'parsed.csv', 'w', newline='')
     writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -179,8 +180,8 @@ def find_best_over(k=100, f=[2, 5, 6, 7], fnameprefix='results'):
 
 ## Run the script over here
 # find_best_over(300, [2, 3, 4, 5, 6, 7])
-# find_best_over(2000, [2, 3, 4, 5, 6, 7, 8])
-find_best_over(300, [2, 3, 4, 5, 6])
+find_best_over(500, [2, 3, 4, 5, 6, 7, 8])
+#find_best_over(300, [2, 3, 4, 5, 6])
 
 
 # find_k_best('results2', 40)
