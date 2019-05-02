@@ -180,7 +180,7 @@ def find_best_over(k=100, f=[2, 5, 6, 7], fnameprefix='results'):
 
 ## Run the script over here
 # find_best_over(300, [2, 3, 4, 5, 6, 7])
-find_best_over(500, [2, 3, 4, 5, 6, 7, 8])
+find_best_over(2500, [2, 3, 4, 5, 6, 7, 8])
 #find_best_over(300, [2, 3, 4, 5, 6])
 
 
