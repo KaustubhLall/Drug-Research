@@ -217,4 +217,4 @@ def enumerate_over_features(ftest, ftrain, f=[2, 3, 4, 5, 6, 7, 8]):
 
 
 ###### Call function over here to run the file
-enumerate_over_features('test.csv', 'train.csv')
+enumerate_over_features('test.csv', 'train.csv', list(range(6, 9)))
